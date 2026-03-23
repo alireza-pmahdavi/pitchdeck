@@ -1,15 +1,15 @@
-import image_5af95c74e8fa3fefeab27eade9dbd85574a5477d from 'figma:asset/5af95c74e8fa3fefeab27eade9dbd85574a5477d.png';
+import image_5af95c74e8fa3fefeab27eade9dbd85574a5477d from '@/assets/5af95c74e8fa3fefeab27eade9dbd85574a5477d.png';
 import React from 'react';
 import { SlideLayout } from '@/app/components/SlideLayout';
 import { motion } from 'motion/react';
 import { GlassCard } from '@/app/components/GlassCard';
 
 // Figma Assets
-import imgRahaVPN from "figma:asset/ebd097fb31cc16851246837be9abb2257e1d23d2.png";
-import imgPayaCloud from "figma:asset/d7dd70b7d6b4ebead35ed4d0a70b4020f938b875.png";
-import imgAutoVM from "figma:asset/e88e8aaf9a6abd164b3eaa998cd9434069eafccc.png";
-import imgCaasify from "figma:asset/9231ea414c206a029c384af394fc23ee796aacbb.png";
-import imgProfile from "figma:asset/7425545c1509ff6352525f4de13ef34c334b9403.png";
+import imgRahaVPN from "@/assets/ebd097fb31cc16851246837be9abb2257e1d23d2.png";
+import imgPayaCloud from "@/assets/d7dd70b7d6b4ebead35ed4d0a70b4020f938b875.png";
+import imgAutoVM from "@/assets/e88e8aaf9a6abd164b3eaa998cd9434069eafccc.png";
+import imgCaasify from "@/assets/9231ea414c206a029c384af394fc23ee796aacbb.png";
+import imgProfile from "@/assets/7425545c1509ff6352525f4de13ef34c334b9403.png";
 
 export function TeamSlide() {
   const logos = [

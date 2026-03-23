@@ -1,8 +1,8 @@
-import imgPhoto20241105101008RemovebgPreview1 from "figma:asset/ebd097fb31cc16851246837be9abb2257e1d23d2.png";
-import img685Ec23150B447989823B005425008AePhotoroom1 from "figma:asset/d7dd70b7d6b4ebead35ed4d0a70b4020f938b875.png";
-import imgLogoWhiteRemovebgPreview1 from "figma:asset/e88e8aaf9a6abd164b3eaa998cd9434069eafccc.png";
-import img3DLogo1 from "figma:asset/9231ea414c206a029c384af394fc23ee796aacbb.png";
-import imgImg20240911101659672 from "figma:asset/7425545c1509ff6352525f4de13ef34c334b9403.png";
+import imgPhoto20241105101008RemovebgPreview1 from "../assets/ebd097fb31cc16851246837be9abb2257e1d23d2.png";
+import img685Ec23150B447989823B005425008AePhotoroom1 from "../assets/d7dd70b7d6b4ebead35ed4d0a70b4020f938b875.png";
+import imgLogoWhiteRemovebgPreview1 from "../assets/e88e8aaf9a6abd164b3eaa998cd9434069eafccc.png";
+import img3DLogo1 from "../assets/9231ea414c206a029c384af394fc23ee796aacbb.png";
+import imgImg20240911101659672 from "../assets/7425545c1509ff6352525f4de13ef34c334b9403.png";
 
 function Group() {
   return (

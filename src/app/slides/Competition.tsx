@@ -4,9 +4,9 @@ import { motion } from 'motion/react';
 import svgPaths from "@/imports/svg-kppwyycpsv";
 
 // Images
-import imgHetzner from "figma:asset/3775161f2b6658b17970c81127d196bfbcc3331a.png";
-import imgHostinger from "figma:asset/3e6bf0dfaf62c1830626609442eab81d93326812.png";
-import imgCaasify from "figma:asset/9231ea414c206a029c384af394fc23ee796aacbb.png";
+import imgHetzner from "@/assets/3775161f2b6658b17970c81127d196bfbcc3331a.png";
+import imgHostinger from "@/assets/3e6bf0dfaf62c1830626609442eab81d93326812.png";
+import imgCaasify from "@/assets/9231ea414c206a029c384af394fc23ee796aacbb.png";
 
 export function CompetitionSlide() {
   return (
