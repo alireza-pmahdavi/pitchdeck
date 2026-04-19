@@ -38,7 +38,7 @@ export function InvestmentSlide() {
           <h2 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 leading-tight">
             Join Our Journey
           </h2>
-          <p className="text-[#9A92B1] mt-2 text-sm md:text-base">Pre-Seed · SAFE Note</p>
+          <p className="text-[#9A92B1] mt-2 text-sm md:text-base">Pre-Seed</p>
         </motion.div>
 
         {/* Deal Terms */}

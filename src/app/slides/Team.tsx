@@ -13,9 +13,9 @@ import imgProfile from "@/assets/7425545c1509ff6352525f4de13ef34c334b9403.png";
 
 export function TeamSlide() {
   const logos = [
-    { name: "Caasify", src: imgCaasify },
-    { name: "AutoVM", src: imgAutoVM },
-    { name: "PayaCloud", src: imgPayaCloud },
+    { name: "Caasify", src: imgCaasify, href: "https://caasify.com" },
+    { name: "AutoVM", src: imgAutoVM, href: "https://autovm.net" },
+    { name: "PayaCloud", src: imgPayaCloud, href: "https://payacloud.com" },
     { name: "RahaVPN", src: imgRahaVPN },
   ];
 
@@ -59,18 +59,36 @@ export function TeamSlide() {
           {/* Logos */}
           <div className="flex items-center gap-6 md:gap-12 flex-wrap justify-center">
             {logos.map((logo, index) => (
-              <motion.div 
-                key={logo.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 + index * 0.1 }}
-                className="flex flex-col items-center gap-2 md:gap-3 group"
-              >
-                <div className="h-10 w-10 md:h-12 md:w-12 flex items-center justify-center transition-transform group-hover:scale-110">
-                  <img src={logo.src} alt={logo.name} className="max-h-full max-w-full object-contain" />
-                </div>
-                <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-wider group-hover:text-white transition-colors">{logo.name}</span>
-              </motion.div>
+              logo.href ? (
+                <motion.a
+                  key={logo.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 + index * 0.1 }}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-2 md:gap-3 group"
+                >
+                  <div className="h-10 w-10 md:h-12 md:w-12 flex items-center justify-center transition-transform group-hover:scale-110">
+                    <img src={logo.src} alt={logo.name} className="max-h-full max-w-full object-contain" />
+                  </div>
+                  <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-wider group-hover:text-white transition-colors">{logo.name}</span>
+                </motion.a>
+              ) : (
+                <motion.div
+                  key={logo.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 + index * 0.1 }}
+                  className="flex flex-col items-center gap-2 md:gap-3 group"
+                >
+                  <div className="h-10 w-10 md:h-12 md:w-12 flex items-center justify-center transition-transform group-hover:scale-110">
+                    <img src={logo.src} alt={logo.name} className="max-h-full max-w-full object-contain" />
+                  </div>
+                  <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-wider group-hover:text-white transition-colors">{logo.name}</span>
+                </motion.div>
+              )
             ))}
           </div>
 
