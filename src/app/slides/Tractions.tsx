@@ -38,13 +38,21 @@ export function TractionsSlide() {
             let formattedValue = String(item.Value);
             const val = Number(item.Value);
             const isNum = !isNaN(val) && typeof item.Value === 'number';
+            const title = String(item.Title).trim().toLowerCase();
+            const titleWithoutPeriod = title.replace(/ \([^)]+\)$/, '');
+            const isCurrency = titleWithoutPeriod === 'mrr' || [
+              'ltv', 'cac', 'arpu', 'ttv (platform volume)', 'gross income', 'total cost', 'arr', 'cash in bank',
+            ].includes(title);
+            const isPercentage = titleWithoutPeriod === 'latest mom growth' || [
+              'churn rate', 'average churn rate', 'conversion rate', 'take rate', 'gross margin', 'average mom',
+            ].includes(title);
 
             // Currency formatting
-            if (['LTV', 'CAC', 'ARPU', 'TTV (Platform Volume)', 'Gross Income', 'Total Cost', 'MRR (December)', 'ARR', 'Cash in Bank'].includes(item.Title) && isNum) {
+            if (isCurrency && isNum) {
                formattedValue = new Intl.NumberFormat('en-IE', { style: 'currency', currency: 'EUR' }).format(val);
             } 
             // Percentage formatting
-            else if (['Average Churn Rate', 'Conversion Rate', 'Take Rate', 'Gross Margin', 'Average MoM'].includes(item.Title) && isNum) {
+            else if (isPercentage && isNum) {
                formattedValue = new Intl.NumberFormat('en-IE', { style: 'percent', minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(val);
             } 
             // String formatting cleanup
